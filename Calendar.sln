@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Web
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calendar", "Calendar\Calendar.csproj", "{9B126B47-3363-40A7-9997-89F7E0CE2F1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendarTest", "CalendarTest\CalendarTest.csproj", "{FDD915FE-016D-4F86-8D43-E830F1FC4604}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendarService", "CalendarService\CalendarService.csproj", "{9BE00664-DA38-477D-813E-16F43EE6F0AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B126B47-3363-40A7-9997-89F7E0CE2F1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B126B47-3363-40A7-9997-89F7E0CE2F1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B126B47-3363-40A7-9997-89F7E0CE2F1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B126B47-3363-40A7-9997-89F7E0CE2F1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDD915FE-016D-4F86-8D43-E830F1FC4604}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDD915FE-016D-4F86-8D43-E830F1FC4604}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDD915FE-016D-4F86-8D43-E830F1FC4604}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDD915FE-016D-4F86-8D43-E830F1FC4604}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BE00664-DA38-477D-813E-16F43EE6F0AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BE00664-DA38-477D-813E-16F43EE6F0AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BE00664-DA38-477D-813E-16F43EE6F0AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BE00664-DA38-477D-813E-16F43EE6F0AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
