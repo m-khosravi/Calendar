@@ -211,36 +211,20 @@ namespace CalendarTest
         }
 
         [TestMethod]
-        public void SearchDB_returns_1_result()
+        public void SearchDBOnlyActive_returns_10_results()
+        {
+            Int32 expected = 10;
+            IEventRepository repo = new CalendarRepository(new EventsData().Load());
+            List<CalEvent> actual = repo.Search("", "", DateTime.MinValue, DateTime.MinValue, true, expected);
+            Assert.AreEqual(expected, actual.Count, "DB not returning 10 results.");
+        }
+
+        [TestMethod]
+        public void SearchDBKeyword_returns_1_results()
         {
             IEventRepository repo = new CalendarRepository(new EventsData().Load());
-            List<CalEvent> actual = repo.Search("","",DateTime.MinValue,DateTime.MinValue,true,20);
-            CalEvent calEvent = new CalEvent()
-            {
-                CalendarId = 1724,
-                Title = "Grades Due",
-                Description = "Suspendisse fermentum nibh ac cursus pretium. Vivamus neque urna, cursus vitae blandit ut, condimentum quis dui. Donec nec sollicitudin odio, id gravida lorem. Aliquam erat volutpat. Curabitur id turpis elementum libero volutpat lacinia. Vivamus fermentum nulla maximus ante volutpat, sit amet molestie tellus mollis. Duis pharetra tincidunt dolor quis congue. Nunc diam lacus, rhoncus in tristique ornare, mollis nec sem. Suspendisse dictum orci imperdiet ullamcorper pretium. Nulla sollicitudin libero massa, ut placerat justo laoreet pulvinar. Morbi luctus at massa vel sodales. Aenean bibendum lobortis mauris. Etiam at dignissim massa. Nulla sit amet condimentum sapien.",
-                StartDate = new DateTime(2015, 4, 23),
-                EndDate = new DateTime(2015, 4, 23),
-                StartTime = "7:00 PM",
-                EndTime = "9:00 PM",
-                ContactName = "Shatealy Johnson",
-                ContactDetails = "johnsons@savannahstate.edu",
-                EventType = "calendar",
-                Status = "live",
-                Url = "http://www.google.com"
-            };
-
-            List<CalEvent> expected = new List<CalEvent>();
-            expected.Add(calEvent);
-
-            Assert.AreEqual(expected[0].CalendarId, actual[0].CalendarId, "CalendarId not equal");
-            Assert.AreEqual(expected[0].Title, actual[0].Title, "Title not equal");
-            Assert.AreEqual(expected[0].StartDate, actual[0].StartDate, "StartDate not equal");
-            Assert.AreEqual(expected[0].EndDate, actual[0].EndDate, "EndDate not equal");
-            Assert.AreEqual(expected[0].ContactName, actual[0].ContactName, "ContactName not equal");
-            Assert.AreEqual(expected[0].EventType, actual[0].EventType, "EventType not equal");
-            Assert.AreEqual(expected[0].Status, actual[0].Status, "Status not equal");
+            List<CalEvent> actual = repo.Search("week", "", DateTime.MinValue, DateTime.MinValue, true, 0);
+            Assert.IsNotNull(actual, "DB not returning results.");
         }
 
     }

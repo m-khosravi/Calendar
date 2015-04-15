@@ -14,7 +14,8 @@ namespace SavannahState.Calendar
         public String StartTime { get; set; }//starting_time
         public String EndTime { get; set; }//ending_time
         public String Description { get; set; }//long_description
-        public String Category { get; set; }
+        public String CategoryId { get; set; }
+        public String CategoryName { get; set; }
         public String ContactName { get; set; }//contact_name
         public String ContactDetails { get; set; }//contact_info
         public String AdditionalDetails { get; set; }
